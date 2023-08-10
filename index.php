@@ -20,6 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 
+
 <?php if ( is_front_page() && is_home() ) : ?>
 	<?php get_template_part( 'global-templates/hero' ); ?>
 <?php endif; ?>
@@ -47,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 								 */
 								?>
-                                <div class="col-4 col-md-6">
+                                <div class="col-md-6 col-lg-4">
 									<?php get_template_part( 'loop-templates/content', get_post_format() ); ?>
                                 </div>
 							<?php
