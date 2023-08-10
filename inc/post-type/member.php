@@ -9,7 +9,7 @@ function registerTeamMember()
 		'add_new_item' => 'Ajouter un membre',
 		'edit_item' => 'Editer un membre',
 		'new_item' => 'Nouveau membre',
-		'all_items' => 'Tout les membres',
+		'all_items' => 'Tous les membres',
 		'view_item' => 'Voir le membre',
 		'search_items' => 'Chercher un membre',
 		'not_found' => 'Aucun membre trouvé',
@@ -24,7 +24,7 @@ function registerTeamMember()
 		'labels' => $labels,
 		'hierarchical' => false,
 		'description' => 'Les membres',
-		'public' => false,
+		'public' => true,
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,
@@ -36,6 +36,7 @@ function registerTeamMember()
 		'supports' => [
 			'title',
 			'editor',
+			'thumbnail'
 		],
 		'menu_icon' => 'dashicons-admin-users',
 	];
