@@ -29,7 +29,7 @@ function registerTeamMember()
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'query_var' => true,
-		// 'taxonomies' => ['job_category'],
+		'taxonomies' => ['member_type'],
 		'capability_type' => 'post',
 		'has_archive' => 'membres',
 		'menu_position' => null,
@@ -43,3 +43,30 @@ function registerTeamMember()
 
 	register_post_type('team_member', $args);
 }
+
+/*
+* Plugin Name: Course Taxonomy
+* Description: A short example showing how to add a taxonomy called Course.
+* Version: 1.0
+* Author: developer.wordpress.org
+* Author URI: https://codex.wordpress.org/User:Aternus
+*/
+
+function registerTeamMemberTypeTaxonomy() {
+	$labels = array(
+		'name'              => __( 'Type' ),
+		'singular_name'     => __( 'Type' ),
+		'menu_name'         => __( 'Type' ),
+	);
+	$args   = array(
+		'hierarchical'      => true, // make it hierarchical (like categories)
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'public' => false,
+	);
+	register_taxonomy( 'member_type', [ 'team_member' ], $args );
+}
+
+

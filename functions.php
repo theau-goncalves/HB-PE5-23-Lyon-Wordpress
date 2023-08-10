@@ -12,3 +12,4 @@ add_action( 'wp_enqueue_scripts', 'myThemeScriptEnqueue' );
 
 //Ajout du post-type membre
 add_action('init', 'registerTeamMember');
+add_action( 'init', 'registerTeamMemberTypeTaxonomy' );
