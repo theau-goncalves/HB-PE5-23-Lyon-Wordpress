@@ -1,3 +1,43 @@
+.btn {
+  border-radius: 0px !important;
+}
+.btn.btn-primary {
+  color: white;
+  background: #f8c500;
+  border-color: #f8c500;
+}
 
+.default-card:hover .thumbnail-wrapper img {
+  transform: scale(1.1);
+}
+.default-card a {
+  color: black;
+  text-decoration: none;
+}
+.default-card .thumbnail-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+.default-card .thumbnail-wrapper a {
+  display: block;
+  height: 100%;
+}
+.default-card .thumbnail-wrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition-duration: 0.5s;
+}
+.default-card .entry-title a {
+  font-size: 1.2rem;
+}
+.default-card .entry-meta {
+  display: flex;
+  justify-content: space-around;
+}
+.default-card .entry-footer {
+  padding-top: 1.5rem;
+}
 
 /*# sourceMappingURL=main.css.map */

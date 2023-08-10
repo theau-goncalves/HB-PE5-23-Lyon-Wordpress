@@ -1,0 +1,11 @@
+.btn {
+    border-radius: 0px !important;
+
+    &.btn-primary {
+
+        color: white;
+        background: $main-color;
+        border-color: $main-color;
+    }
+}
+

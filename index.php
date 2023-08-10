@@ -48,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 								 */
 								?>
-                                <div class="col-md-6 col-lg-4">
+                                <div class="col-md-6 col-lg-4 mt-4">
 									<?php get_template_part( 'loop-templates/content', get_post_format() ); ?>
                                 </div>
 							<?php
