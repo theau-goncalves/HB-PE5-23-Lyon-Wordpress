@@ -1,6 +1,10 @@
 <?php
 
-include 'inc/post-type/member.php';
+//Post Type
+require_once 'inc/post-type/member.php';
+
+//ACF fields
+require_once 'inc/acf-field-group/member-group.php';
 /**
  * Proper way to enqueue scripts and styles
  */
