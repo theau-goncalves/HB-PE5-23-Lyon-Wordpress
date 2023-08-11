@@ -33,3 +33,23 @@ function displayOneMemberShortcode($attr) {
 }
 
 
+add_shortcode( 'top_users', 'topUsersShortcode' );
+
+function topUsersShortcode($attr = ['number' => 3])
+{
+	return wp_list_authors([
+		'orderby' => 'post_count',
+		'order' => 'DESC',
+		'hide_empty' => false,
+		'optioncount' => true,
+		'echo' => false,
+		'number' => $attr['number'],
+	]);
+}
+
+
+
+
+
+
+
