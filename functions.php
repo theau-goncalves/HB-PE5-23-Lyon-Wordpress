@@ -16,10 +16,20 @@ add_action( 'init', 'registerTeamMemberTypeTaxonomy' );
 
 
 add_shortcode( 'member_card', 'displayOneMemberShortcode' );
-function displayOneMemberShortcode($atts) {
+function displayOneMemberShortcode($attr) {
 	$query = new WP_Query([
-		'post_type' => 'team_member'
+		'post_type' => 'team_member',
+		'posts_per_page' => 1,
+		'p' => intval($attr['id']),
 	]);
 
-	return '<pre>' . var_export($query->posts, true ) . '</pre>';
+	if($query->have_posts()) {
+		ob_start();
+		$query->the_post();
+		get_template_part( 'partials/card/card', 'member' );
+
+		return ob_get_clean();
+	}
 }
+
+
